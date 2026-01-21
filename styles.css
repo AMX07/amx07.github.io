@@ -44,6 +44,138 @@ p {
   object-fit: cover;
   border: 1px solid #e5e5e5;
 }
+.intro-attribution {
+  font-size: 0.95rem;
+  color: #555;
+}
+.pathways {
+  margin-top: 40px;
+}
+.pathway-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.pathway-list::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 4px;
+  bottom: 0;
+  width: 2px;
+  background: #111;
+  opacity: 0.12;
+}
+.pathway-item {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 24px;
+}
+.pathway-item:last-child {
+  margin-bottom: 0;
+}
+.node-marker {
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #111;
+}
+.node-content p {
+  margin: 4px 0 0;
+}
+.node-date {
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #555;
+}
+.node-title {
+  font-weight: 500;
+}
+.node-summary {
+  color: #555;
+  font-size: 0.95rem;
+}
+.pathway-item.spawn .node-marker {
+  background: #2f9e44;
+}
+.pathway-item.spawn .node-date,
+.pathway-item.spawn .node-title {
+  color: #2f9e44;
+  font-size: 0.85rem;
+}
+.future-branches {
+  margin-top: 16px;
+  padding-left: 20px;
+  position: relative;
+}
+.future-branches::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 10px;
+  width: 18px;
+  height: 1px;
+  background: #2f9e44;
+}
+.future-graphic {
+  margin-top: 8px;
+  margin-left: -6px;
+}
+.future-graphic svg {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  display: block;
+}
+.future-graphic path {
+  fill: none;
+  stroke: #2f9e44;
+  stroke-width: 2;
+  stroke-linecap: round;
+  opacity: 0.7;
+}
+.future-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2f9e44;
+}
+.future-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: grid;
+  gap: 10px;
+}
+.future-list li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2f9e44;
+  font-size: 0.95rem;
+}
+.future-list li::before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 10px;
+  width: 12px;
+  height: 1px;
+  background: #2f9e44;
+}
+.future-node {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #2f9e44;
+  flex: 0 0 auto;
+}
 ul {
   margin: 0;
   padding-left: 18px;
