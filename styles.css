@@ -61,7 +61,7 @@ p {
   content: "";
   position: absolute;
   left: 9px;
-  top: 4px;
+  top: 0;
   bottom: 0;
   width: 2px;
   background: #111;
@@ -121,23 +121,6 @@ p {
   width: 18px;
   height: 1px;
   background: #2f9e44;
-}
-.future-graphic {
-  margin-top: 8px;
-  margin-left: -6px;
-}
-.future-graphic svg {
-  width: 100%;
-  max-width: 260px;
-  height: auto;
-  display: block;
-}
-.future-graphic path {
-  fill: none;
-  stroke: #2f9e44;
-  stroke-width: 2;
-  stroke-linecap: round;
-  opacity: 0.7;
 }
 .future-label {
   font-size: 0.8rem;
