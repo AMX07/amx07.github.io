@@ -30,35 +30,50 @@
     </section>
 
     <section class="pathways">
-      <h2>Pathways</h2>
+      <!-- <h2>Pathways</h2> -->
+      <!-- <p class="pathways-intro">One path taken among many possible.</p> -->
       <ol class="pathway-list">
-        <li class="pathway-item spawn">
-          <span class="node-marker" aria-hidden="true"></span>
+        <li class="pathway-item origin">
+          <div class="node-line">
+            <span class="node-dot"></span>
+            <span class="branch-hint left"></span>
+            <span class="branch-hint right"></span>
+          </div>
           <div class="node-content">
-            <span class="node-date">Spawning point</span>
-            <p class="node-title">Spawned into the world.</p>
+            <span class="node-date"></span>
+            <p class="node-title">Spawning Point</p>
           </div>
         </li>
         <li class="pathway-item">
-          <span class="node-marker" aria-hidden="true"></span>
+          <div class="node-line">
+            <span class="node-dot"></span>
+            <span class="branch-hint left"></span>
+            <span class="branch-hint right"></span>
+          </div>
           <div class="node-content">
             <span class="node-date">2020 — 2024</span>
             <p class="node-title">Purdue University · B.S. Computer Science.</p>
-            <p class="node-summary">Graduated May 2024, Dean’s List, GPA 3.69.</p>
+            <p class="node-summary">Graduated May 2024, Dean's List, GPA 3.69.</p>
           </div>
         </li>
         <li class="pathway-item">
-          <span class="node-marker" aria-hidden="true"></span>
+          <div class="node-line">
+            <span class="node-dot"></span>
+            <span class="branch-hint left"></span>
+            <span class="branch-hint right"></span>
+          </div>
           <div class="node-content">
             <span class="node-date">Jun 2023 — Aug 2023</span>
             <p class="node-title">AI Researcher · Clinical Data Analysis using NLP.</p>
-            <p class="node-summary">
-              Published <a href="https://www.computer.org/csdl/proceedings-article/bigdata/2023/10386811/1TUPhlD5ZzG">IEEE Big Data 2023 paper</a> on zero-shot data extraction with GPT models.
-            </p>
+            <p class="node-summary">Published <a href="https://www.computer.org/csdl/proceedings-article/bigdata/2023/10386811/1TUPhlD5ZzG">IEEE Big Data 2023 paper</a> on zero-shot data extraction.</p>
           </div>
         </li>
         <li class="pathway-item">
-          <span class="node-marker" aria-hidden="true"></span>
+          <div class="node-line">
+            <span class="node-dot"></span>
+            <span class="branch-hint left"></span>
+            <span class="branch-hint right"></span>
+          </div>
           <div class="node-content">
             <span class="node-date">Oct 2023 — May 2024</span>
             <p class="node-title">Indiana University · Web Developer Intern.</p>
@@ -66,20 +81,38 @@
           </div>
         </li>
         <li class="pathway-item current">
-          <span class="node-marker" aria-hidden="true"></span>
+          <div class="node-line">
+            <span class="node-dot"></span>
+          </div>
           <div class="node-content">
             <span class="node-date">Jan 2024 — Present</span>
             <p class="node-title">Indiana Farm Bureau Insurance · Software Engineer.</p>
             <p class="node-summary">Shipped AI doc review tooling and production-grade PDF extraction pipelines.</p>
           </div>
-          <div class="future-branches">
-            <span class="future-label">Open pathways</span>
+        </li>
+        <li class="pathway-item future">
+          <div class="node-line future-line">
+            <svg class="future-svg" viewBox="0 0 40 50" aria-hidden="true">
+              <path d="M20 0 Q8 25 4 46" stroke="#2f9e44" stroke-width="1.5" fill="none"/>
+              <path d="M20 0 Q14 25 12 46" stroke="#2f9e44" stroke-width="1.5" fill="none"/>
+              <path d="M20 0 L20 46" stroke="#2f9e44" stroke-width="1.5" fill="none"/>
+              <path d="M20 0 Q26 25 28 46" stroke="#2f9e44" stroke-width="1.5" fill="none"/>
+              <path d="M20 0 Q32 25 36 46" stroke="#2f9e44" stroke-width="1.5" fill="none"/>
+              <circle cx="4" cy="46" r="3" fill="none" stroke="#2f9e44" stroke-width="1.5"/>
+              <circle cx="12" cy="46" r="3" fill="none" stroke="#2f9e44" stroke-width="1.5"/>
+              <circle cx="20" cy="46" r="3" fill="none" stroke="#2f9e44" stroke-width="1.5"/>
+              <circle cx="28" cy="46" r="3" fill="none" stroke="#2f9e44" stroke-width="1.5"/>
+              <circle cx="36" cy="46" r="3" fill="none" stroke="#2f9e44" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="node-content">
+            <span class="node-date">Open pathways</span>
             <ul class="future-list">
-              <li><span class="future-node" aria-hidden="true"></span><span>New research frontiers.</span></li>
-              <li><span class="future-node" aria-hidden="true"></span><span>Product experiments.</span></li>
-              <li><span class="future-node" aria-hidden="true"></span><span>Foundational models.</span></li>
-              <li><span class="future-node" aria-hidden="true"></span><span>Human-centered AI.</span></li>
-              <li><span class="future-node" aria-hidden="true"></span><span>Yet to be written.</span></li>
+              <li>New research frontiers</li>
+              <li>Product experiments</li>
+              <li>Foundational models</li>
+              <li>Human-centered AI</li>
+              <li>Yet to be written</li>
             </ul>
           </div>
         </li>
