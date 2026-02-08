@@ -1,34 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects · Ansh Mittal</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Ctext x='10' y='42' font-size='30' fill='%23fff' font-family='Helvetica, Arial, sans-serif'%3E0%201%3C/text%3E%3C/svg%3E">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Ctext x='10' y='42' font-size='30' fill='%23fff' font-family='Helvetica, Arial, sans-serif'%3E0%201%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <main>
     <nav>
       <a href="index.html">Home</a>
-      <a href="thoughts.html">Thoughts</a>
-      <a href="media.html">Media That I Like</a>
+      <a href="writings.html">Writings</a>
       <a href="projects.html">Projects</a>
       <a href="resume.pdf">Resume</a>
     </nav>
 
-    <h1>Projects</h1>
-    <p>A selection of projects I have enjoyed building.</p>
 
-    <ul>
-      <li><strong>Evaluation Lab</strong> — Lightweight tooling for quick model experiments.</li>
-      <li><strong>Calm Inbox</strong> — A focus-first email triage flow.</li>
-      <li><strong>Readable Metrics</strong> — A dashboard template for ML health checks.</li>
-    </ul>
+    <p>
+      As you become an adult, you realize that things around you weren't just always there; people made them happen. But
+      only recently have I started to internalize how much tenacity <em>everything</em> requires. That hotel, that park,
+      that railway. The world is a museum of passion projects.
+    </p>
+    <p class="intro-attribution">
+      — <a href="https://x.com/collision/status/1529452415346302976?s=20">John Collison</a>
+    </p>
+
+    <section id="model-training">
+      <h2>AI Model Training</h2>
+      <p>Projects related to training and understanding models from first principles.</p>
+
+      <h3>Neural Networks</h3>
+      <ol>
+        <li><a href="https://github.com/AMX07/micrograd">Implementing Andrej Karpathy's Micrograd: A lightweight NN
+            training library (Fundamental parts of PyTorch and backprop).</a></li>
+        <li><a href="https://github.com/AMX07/makemore">Language model training using MLP: a character based language
+            model, implemented using statistical counting and NN backrpop approach.</a></li>
+        <li>Language model training: implementing MLP paper from Bengio et all.</li>
+        <li>MLP: Activations, gradients, BatchNorm.</li>
+        <li>Brackprop in MLP, debuging modern NNs.</li>
+        <li>MLP to WaveNet Deepmind 2026.</li>
+        <li><a href="https://arxiv.org/abs/1706.03762">Implementing Transformer Attention is All You Need paper.</a>
+        </li>
+        <li>GPT tokenizer.</li>
+        <li>Implementing GPT-2: GPT-2 network setup, optimization, training runs. References: <a
+            href="https://arxiv.org/abs/1706.03762">Attention is All You Need</a>, <a
+            href="https://arxiv.org/abs/2005.14165">OpenAI GPT-3 paper</a>, OpenAI GPT-2 paper link (to be updated).
+        </li>
+      </ol>
+    </section>
+
+    <section id="ai-applications">
+      <h2>AI Applications</h2>
+      <ol>
+        <li> <a href="https://www.computer.org/csdl/proceedings-article/bigdata/2023/10386811/1TUPhlD5ZzG">Clinical data
+            NER using
+            GPT-3 models. </a> This was my introduction to the world of <a href="https://arxiv.org/abs/2309.05475">
+            research </a> and LLM fundamental usecases.</li>
+      </ol>
+
+    </section>
 
     <footer>
       <p>Back to <a href="index.html">home</a>.</p>
     </footer>
   </main>
 </body>
+
 </html>
