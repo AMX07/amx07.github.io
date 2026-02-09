@@ -34,16 +34,6 @@ p {
 .intro-text {
   flex: 1 1 320px;
 }
-.intro-photo {
-  flex: 0 0 auto;
-}
-.profile-photo {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid #e5e5e5;
-}
 .intro-attribution {
   font-size: 0.95rem;
   color: #555;
