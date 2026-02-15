@@ -13,7 +13,8 @@ main {
   max-width: 720px;
   margin: 0 auto;
 }
-h1, h2 {
+h1,
+h2 {
   font-weight: 500;
   line-height: 1.2;
   margin: 0 0 16px;
@@ -91,7 +92,9 @@ p {
   width: 14px;
   height: 14px;
   background: #111;
-  box-shadow: 0 0 0 3px #fff, 0 0 0 5px #2f9e44;
+  box-shadow:
+    0 0 0 3px #fff,
+    0 0 0 5px #2f9e44;
 }
 .branch-hint {
   position: absolute;
@@ -205,4 +208,40 @@ footer {
   margin-top: 40px;
   font-size: 0.9rem;
   color: #555;
+}
+
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.quote-card {
+  border-radius: 12px;
+  border: 1px solid;
+  padding: 16px;
+}
+.quote-card blockquote {
+  margin: 0;
+  font-size: 0.98rem;
+}
+.quote-card .intro-attribution {
+  margin-top: 12px;
+  margin-bottom: 0;
+  font-size: 0.85rem;
+}
+.quote-card-a {
+  background: #fff7ed;
+  border-color: #fdba74;
+}
+.quote-card-b {
+  background: #ecfeff;
+  border-color: #67e8f9;
+}
+.quote-card-c {
+  background: #f5f3ff;
+  border-color: #c4b5fd;
+}
+.quote-card-d {
+  background: #f0fdf4;
+  border-color: #86efac;
 }
