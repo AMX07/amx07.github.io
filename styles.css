@@ -247,3 +247,9 @@ footer {
   background: #f0fdf4;
   border-color: #86efac;
 }
+.project {
+  margin-bottom: 20px;
+}
+.project p {
+  margin: 0 0 4px;
+}

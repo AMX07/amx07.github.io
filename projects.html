@@ -14,21 +14,48 @@
   <main>
     <nav>
       <a href="index.html">Home</a>
-      <a href="quotes.html">Quotes</a>
-      <a href="https://github.com/AMX07/">project</a>
+      <a href="projects.html">Projects</a>
       <a href="https://linkedin.com/in/itsanshmittal">LinkedIn</a>
       <a href="https://x.com/itsanshmittal">Twitter</a>
       <a href="https://scholar.google.com/citations?user=qBmz69AAAAAJ&amp;hl=en">Google Scholar</a>
       <a href="AnshMittal-master.pdf">Resume</a>
     </nav>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>
-        View all of my projects on
-        <a href="https://github.com/AMX07/">project</a>.
-      </p>
+    <h1>Projects</h1>
+
+    <section class="project-list">
+      <article class="project">
+        <p class="node-title">Transformer LM from Scratch · <em>PyTorch</em></p>
+        <p class="node-summary">Built a byte-level BPE tokenizer, a decoder-only Transformer, AdamW and the training loop from scratch in PyTorch, and trained it on TinyStories and OpenWebText.</p>
+      </article>
+
+      <article class="project">
+        <p class="node-title">Efficient Multi-GPU Training · <em>PyTorch, Triton</em></p>
+        <p class="node-summary">Wrote a FlashAttention-2 Triton kernel and implemented DDP, optimizer state sharding and FSDP, profiled with Nsight.</p>
+      </article>
+
+      <article class="project">
+        <p class="node-title">Scaling Laws · <em>Python</em></p>
+        <p class="node-summary">Fit Chinchilla-style IsoFLOPs scaling laws on a fixed experiment budget to predict the compute-optimal model size and hyperparameters for a 48 B200-hour run.</p>
+      </article>
+
+      <article class="project">
+        <p class="node-title">Pre-training Data Curation · <em>Python</em></p>
+        <p class="node-summary">Built Common Crawl filtering (HTML-to-text extraction, harmful-content and PII filtering, MinHash deduplication) and trained LMs on the curated data.</p>
+      </article>
+
+      <article class="project">
+        <p class="node-title">Reasoning RL · <em>PyTorch, vLLM</em></p>
+        <p class="node-summary">Implemented GRPO and its variants (RFT, Dr. GRPO, MaxRL, off-policy with clipping) to train OLMo-2 1B on GSM8K.</p>
+      </article>
+
+      <article class="project">
+        <p class="node-title">Instruction Tuning and DPO · <em>PyTorch, Hugging Face</em></p>
+        <p class="node-summary">Fine-tuned Llama 3.1 8B with supervised fine-tuning and DPO, measuring changes on MMLU, GSM8K, AlpacaEval and SimpleSafetyTests.</p>
+      </article>
     </section>
+
+    <p>More on <a href="https://github.com/AMX07/">GitHub</a>.</p>
 
     <footer>
       <p>Back to <a href="index.html">home</a>.</p>
