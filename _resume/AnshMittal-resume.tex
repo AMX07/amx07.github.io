@@ -1,0 +1,106 @@
+% Resume in LaTeX - original Jake Gutierrez-based template supplied by Ansh Mittal
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% pdfTeX-only accessibility helpers; Tectonic compiles this template with XeTeX.
+\ifdefined\pdfglyphtounicode
+  \input{glyphtounicode}
+\fi
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\ifdefined\pdfgentounicode
+  \pdfgentounicode=1
+\fi
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-2pt}\item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & #2 \\ \textit{\small#3} & \textit{\small #4} \\ \end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeProjectHeading}[2]{\item\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}\small#1 & #2 \\ \end{tabular*}\vspace{-7pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\begin{document}
+\begin{center}
+  \textbf{\Huge \scshape Ansh Mittal} \\ \vspace{1pt}
+  \small
+  \href{mailto:mittalansh9@gmail.com}{\underline{mittalansh9@gmail.com}} $|$
+  \href{https://linkedin.com/in/itsanshmittal}{\underline{linkedin.com/in/itsanshmittal}} $|$
+  \href{https://github.com/AMX07}{\underline{github.com/AMX07}} $|$
+  \href{https://scholar.google.com/citations?user=qBmz69AAAAAJ&hl=en}{\underline{Google Scholar}} $|$
+  \href{https://amx07.github.io}{\underline{amx07.github.io}}
+\end{center}
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading{Stanford University}{Summer 2026}{Visiting Graduate Student; CS229 (ML), CS231N (Computer Vision), CS336 (Language Modeling)}{ }
+  \resumeSubheading{Purdue University}{Graduated May 2024}{B.S. in Computer Science, GPA 3.69, Dean's List and Top 100 student}{ }
+\resumeSubHeadingListEnd
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading{Aleph Nott}{May 2026 -- Present}{Research Engineer}{San Francisco}
+  \resumeItemListStart
+    \resumeItem{Doing independent research focused on methods to improve LLM training.}
+  \resumeItemListEnd
+  \resumeSubheading{Indiana Farm Bureau Insurance}{January 2024 -- April 2026}{Software Engineer \textbar{} AI Engineering Team}{}
+  \resumeItemListStart
+    \resumeItem{Built and shipped production AI agents on AWS Bedrock for document processing and risk management, supporting actuarial and underwriting operations.}
+  \resumeItemListEnd
+  \resumeSubheading{Indiana University}{October 2023 -- May 2024}{Software Engineering Internship}{}
+  \resumeItemListStart
+    \resumeItem{Worked on Indiana University's online education platform, shipped features that boosted student productivity.}
+  \resumeItemListEnd
+  \resumeSubheading{Purdue University}{June 2023 -- August 2023}{AI Research Intern, Funded by National Institutes of Health}{}
+  \resumeItemListStart
+    \resumeItem{\href{https://arxiv.org/abs/2309.05475}{Evaluated GPT model performance on NER tasks.}}
+    \resumeItem{Our paper was accepted at IEEE BigData conference}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading{\textbf{\href{https://github.com/AMX07/cs336-assignment1-basics}{Transformer LM from Scratch}} $|$ \emph{PyTorch}}{}
+  \resumeItemListStart
+    \resumeItem{Built a Transformer (RoPE, RMSNorm, SwiGLU, AdamW) from scratch; 1.3308 TinyStories loss (target 1.45).}
+    \resumeItem{Ran 27 W\&B sweeps and ablations; at matched budgets, post-norm and NoPE reached 1.3771 and 1.4183 loss.}
+  \resumeItemListEnd
+  \resumeProjectHeading{\textbf{\href{https://github.com/AMX07/inkling-kernel-autoloop}{Kernel Autoloop}} $|$ \emph{Triton, vLLM}}{}
+  \resumeItemListStart
+    \resumeItem{Built an agent-assisted profile-benchmark-accept loop for Inkling inference with byte-exact correctness gates.}
+    \resumeItem{Fused relative-bias conversion into one Triton kernel (37 $\rightarrow$ 1 launches), cutting 4,096-token prefill latency 22.1\% on 2$\times$ B300; not adopted after a decode-regression gate failed.}
+  \resumeItemListEnd
+  \resumeProjectHeading{\textbf{\href{https://github.com/AMX07/post-training-exp}{Post-training Experiments}} $|$ \emph{PyTorch, vLLM, Modal}}{}
+  \resumeItemListStart
+    \resumeItem{Implemented rejection fine-tuning for OLMo-2 1B on GSM8K; 50 steps raised accuracy from 0.29\% to 33.50\%.}
+    \resumeItem{Benchmarked RFT on 2 H100s vs.\ 2 B200s: H100s were faster (104.65 s vs.\ 166.86 s) and cheaper.}
+  \resumeItemListEnd
+  \resumeProjectHeading{\textbf{\href{https://github.com/AMX07/mlxqmc}{Orbformer on Apple MLX}} $|$ \emph{MLX, JAX}}{}
+  \resumeItemListStart
+    \resumeItem{Ported Microsoft's Orbformer neural wavefunction to Apple MLX; matched JAX VMC energy on CH$_4$ within 1.7$\sigma$.}
+    \resumeItem{Found \href{https://github.com/microsoft/oneqmc/issues/11}{a bug in Microsoft's oneqmc} (self-edges never zeroed in message passing), confirmed by the maintainers.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+\section{Relevant Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{\textbf{Languages}: Python, JavaScript, C, HTML, CSS, and SQL \\ \textbf{Libraries}: PyTorch, CUDA, JAX, MLX, Metal \\ \textbf{Tools}: Git/GitHub, Docker, W\&B, Nsight}}
+\end{itemize}
+\end{document}
