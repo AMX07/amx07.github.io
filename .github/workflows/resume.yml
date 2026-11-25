@@ -1,0 +1,69 @@
+name: Resume PDF
+
+# Pull requests: build the resume to check it compiles, and attach the PDF to the run.
+# Pushes to main: rebuild AnshMittal-master.pdf (the file every Resume link opens),
+# commit it if it changed, and ask GitHub Pages to republish the site.
+on:
+  pull_request:
+    paths: ["_resume/**", ".github/workflows/resume.yml"]
+  push:
+    branches: [main]
+    paths: ["_resume/**", ".github/workflows/resume.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: resume-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: wtfjoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Compile resume
+        run: |
+          # Pin the PDF's embedded dates to the last resume change, so an unchanged
+          # source always produces an identical PDF and no empty commits are made.
+          export SOURCE_DATE_EPOCH="$(git log -1 --format=%ct -- _resume)"
+          mkdir -p _resume/build
+          set -o pipefail
+          tectonic _resume/AnshMittal-resume.tex --outdir _resume/build 2>&1 | tee _resume/build/tectonic.log
+          # Warn (without failing) if text runs past the right margin.
+          if grep -q "Overfull" _resume/build/tectonic.log; then
+            echo "::warning::Some resume text runs past the margin; check the PDF."
+          fi
+
+      - name: Attach PDF to the run
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf
+          path: _resume/build/AnshMittal-resume.pdf
+
+      - name: Publish PDF to the site
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cp _resume/build/AnshMittal-resume.pdf AnshMittal-master.pdf
+          if git diff --quiet -- AnshMittal-master.pdf; then
+            echo "PDF unchanged; nothing to publish."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add AnshMittal-master.pdf
+          git commit -m "Rebuild resume PDF from _resume/AnshMittal-resume.tex"
+          git push
+          # Pushes made with the workflow token don't start a Pages build on their own.
+          gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds"
